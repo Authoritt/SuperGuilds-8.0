@@ -1,0 +1,13 @@
+# General Configuration
+# Here's the default configuration of SuperGuilds.
+# DO NOT delete node or key, no support will be given else.
+# The file has an auto-updater, which check every node to
+# verify no-set value, so you don't need to remake your
+# configuration at every update !
+
+# Thanks for using SuperGuilds ;)
+
+# General Configuration
+Races:
+  # The default quantity of right a new player receive.
+  DefaultRights: 5

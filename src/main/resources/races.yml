@@ -1,0 +1,92 @@
+# For more information about RACE system, see the docs.
+# To create new race, copy/paste entry and change the node name.
+# You can create races as much as you want !
+# LINKS :
+# Valid Potion Effects - https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+# Valid Material (1.13+) - https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Emblem Generator - https://itsthesky.info/superguilds/emblem.php
+
+# Thanks for using SuperGuilds ;)
+
+# Menu Configuration
+Settings:
+  # Menu row (= X * 9)
+  Menu-Rows: 3
+  # Specifics Menu Items
+  Items:
+    Close:
+      Item: RED_DYE
+      Name: '&cClose'
+      Slot: 0
+    Information:
+      Item: PAPER
+      Name: '&8&l» &6&lRace Informations'
+      Slot: 4
+      Lore:
+        - '&7Race are like power-up you can get.'
+        - '&7Every race got one good potion effect, but'
+        - '&7also one bad effect to make every race equal.'
+        - '&7You can change race with &3Race Right&7.'
+    RaceRight:
+      Item: GOLD_INGOT
+      Name: '&8&l» &e&lRace Rights: &c&l{RIGHTS}'
+      Slot: 8
+Races:
+  # The node name
+  Vladian:
+    # Slot number
+    Slot: 11
+    # Potion effect
+    Effects:
+      - INCREASE_DAMAGE
+      - SLOW_DIGGING
+    # In-Game name
+    Name: Vladian
+    # In-Game color code
+    Color: '&c'
+    # Lore
+    Lore: 'Vladian are good in combat but are not very well miner.'
+    # Emblem code (64 colors codes separated with ';')
+    Emblem: 7;7;7;7;7;7;7;7;7;7;7;3;3;7;7;7;7;3;7;3;3;7;3;7;7;3;3;3;3;3;3;7;7;7;3;3;3;3;7;7;7;7;3;3;3;3;7;7;7;7;7;7;7;7;7;7;7;3;7;7;7;7;3;7;7
+    # Material ID
+    Item: IRON_SWORD
+  Sturgian:
+    Slot: 12
+    Effects:
+      - FAST_DIGGING
+      - WEAKNESS
+    Name: Sturgian
+    Color: '&3'
+    Lore: 'Sturgian are weak but can mine a lot faster.'
+    Emblem: 7;5;7;7;7;7;5;7;5;7;7;5;5;7;7;5;5;5;7;5;5;7;5;5;7;5;5;7;7;5;5;7;7;7;5;5;5;5;7;7;7;7;5;5;5;5;7;7;7;5;5;5;5;5;5;7;5;5;5;5;5;5;5;5;7
+    Item: IRON_PICKAXE
+  Townsman:
+    Slot: 13
+    Effects:
+      - DAMAGE_RESISTANCE
+      - SLOW
+    Name: Townsman
+    Color: '&e'
+    Lore: 'Townsman are a little bit slow but get less damage.'
+    Emblem: 7;7;7;7;7;7;7;7;7;7;7;7;4;4;4;7;7;7;7;4;4;4;4;4;7;7;7;7;4;4;4;7;7;7;7;7;4;4;4;7;7;7;7;7;7;4;7;7;4;4;4;7;4;4;4;7;7;7;4;4;4;4;4;4;7
+    Item: WHEAT
+  Khuzait:
+    Slot: 14
+    Effects:
+      - JUMP
+      - SLOW_DIGGING
+    Name: Khuzait
+    Color: '&a'
+    Lore: 'Khuzait are slow for mine but can jump at more blocks.'
+    Emblem: 7;7;7;7;7;7;7;7;7;b;7;7;b;7;b;7;7;7;7;b;b;7;7;7;7;b;7;b;7;7;b;7;b;7;b;7;7;b;7;b;7;b;7;b;b;7;b;7;7;7;7;7;7;7;7;7;7;7;7;b;b;7;7;7;7
+    Item: RABBIT_FOOT
+  Battanian:
+    Slot: 15
+    Effects:
+      - REGENERATION
+      - HUNGER
+    Name: Battanian
+    Color: '&4'
+    Lore: 'Battanian get hunger faster but have small regeneration.'
+    Emblem: 7;7;7;8;8;7;7;7;7;8;7;8;8;7;7;7;8;7;7;8;7;7;7;7;8;8;8;8;8;8;8;7;7;7;8;8;8;7;7;8;7;7;8;8;8;7;7;7;7;7;8;7;8;7;7;7;7;8;8;7;8;8;7;7;7
+    Item: GOLDEN_APPLE

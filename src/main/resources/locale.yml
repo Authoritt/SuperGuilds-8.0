@@ -1,0 +1,50 @@
+# This is the default locale (= language) file of SuperGuilds
+# More pre-made locale can be found on the website !
+# Don't forget, before saving and reloading SuperGuilds, to check:
+#   - Encoding choosing (use UTF-8 for non-english character)
+#   - Single ' or " in a sentence (Double them to use)
+#   - If no node (= key) are null
+
+# Thanks for using SuperGuilds ;)
+Key:
+  Prefix: '&8[&6&lSG&8] '
+  NoConsole: '&cYou cannot do that from the console!'
+  NoPerm: '&cYou don''t have the permission to do that!'
+  NoGuild: '&cYou don''t have any guild!'
+  GuildCreation:
+    TooMaxMin: '&cThis name is too long or too small!'
+    AlreadyExist: '&cThis guilld''s name already exist!'
+  HelpMessage:
+    Header: '&8-----[ &6&lSuperGuilds &8]-----'
+    Line1: '&e/g &7- &bOpen the main Guild Menu'
+    Line2: '&e/g help &7- &bSend this message'
+    Footer: '&8-----[ &6&lSuperGuilds &8]-----'
+  ReloadMessage:
+    Header: '&8-----[ &6&lSuperGuilds &8]-----'
+    Info: '&3Possible Reload Arguments:'
+    Line1: '  &eall &7- &bReload everythings into SuperGuilds'
+    Line2: '  &econfig &7- &bReload the config file (config.yml)'
+    Line3: '  &elocale &7- &bReload locale (language file) choosed'
+    Footer: '&8-----[ &6&lSuperGuilds &8]-----'
+    ReloadAllWaiting: '&eReloading every SuperGuilds files ...'
+    ReloadConfigWaiting: '&eReloading configuration file ...'
+    ReloadLocaleWaiting: '&eReloading locale file ...'
+    ReloadFinished: '&aReload finished!'
+  GUI:
+    Prefix: '&8&l» '
+    Race: '&5Race Selection'
+    Guild: '&9Guild Managment'
+  Race:
+    NoRightsRemaining: '&cYou don''t have any more remaining race rights!'
+    RaceChanged: 'You''ve been changed your race, you are now a {RACE} !'
+  Emblem:
+    BookName: '&3&lEmblem Editor'
+    ChangeColor: 'Click for change the selected color!'
+    ClickToPaint: 'Click here to paint the pixel!'
+    Button:
+      Save: '    &2&l[&2✏&2&l]'
+      Reset: '    &4&l[&4✘&4&l]'
+      Back: '    &c&l[&c⤾&c&l]'
+      SaveText: '&aClick here to save your draft emblem'
+      ResetText: '&4Click here to reset your draft emblem'
+      BackText: '&cClick here to return to main guild menu'
