@@ -2,6 +2,7 @@ package info.itsthesky.SuperGuilds.features.guild;
 
 import info.itsthesky.SuperGuilds.SuperGuilds;
 import info.itsthesky.SuperGuilds.features.emblem.EmblemEditor;
+import info.itsthesky.SuperGuilds.features.players.PlayerInfoGUI;
 import info.itsthesky.SuperGuilds.features.races.RaceGUI;
 import info.itsthesky.SuperGuilds.tools.ItemBuilder;
 import info.itsthesky.SuperGuilds.tools.LangManager;
@@ -91,11 +92,11 @@ public class GuildGUI {
 		});
 
 		inventory.addItem(4, infoItem, true, inventoryClickEvent -> {
-			player.closeInventory();
+			new GuildInfoGUI().showGuildInfo(player, guild);
 		});
 
 		inventory.addItem(5, yourItem, true, inventoryClickEvent -> {
-			player.closeInventory();
+			new PlayerInfoGUI().showPlayerInfo(player, player);
 		});
 
 		inventory.addItem(8, racesItem, true, inventoryClickEvent -> {
@@ -105,7 +106,7 @@ public class GuildGUI {
 		/* --------------- */
 
 		inventory.addItem(21, membersItem, true, inventoryClickEvent -> {
-			new RaceGUI().openRaceGUI(player, true);
+			new MemberListGUI().openPageAPI(player);
 		});
 		inventory.addItem(22, claimsItem, true, inventoryClickEvent -> {
 			new RaceGUI().openRaceGUI(player, true);

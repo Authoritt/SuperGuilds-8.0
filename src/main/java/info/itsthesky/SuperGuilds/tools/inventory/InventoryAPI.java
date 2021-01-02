@@ -56,6 +56,12 @@ public class InventoryAPI implements Listener {
         return this;
     }
 
+    public int[] getBorder() {
+        int size = this.getSize();
+        int[] slots = IntStream.range(0, size).filter(i -> size < 27 || i < 9 || i % 9 == 0 || (i - 8) % 9 == 0 || i > size - 9).toArray();
+        return slots;
+    }
+
     public static InventoryAPI create(final Class<? extends JavaPlugin> plugin) {
         return new InventoryAPI(JavaPlugin.getProvidingPlugin(plugin));
     }

@@ -43,11 +43,39 @@ Key:
   GUI:
     Prefix: '&8&l» '
     Race: '&5Race Selection'
+    MemberList:
+      Name: '&bMembers List'
+      BackName: '&cBack'
     GuildInfo:
       Name: '&3Guild Information'
       Items:
         Back: '&cBack'
-
+        General:
+          Name: '&4&l» &cGeneral Information'
+          Lore:
+            - '&6Name: &e{NAME}'
+            - '&6Members: &e{MEMBER_ACTUAL} &6/ &e{MEMBER_MAX}'
+            - '&6Claims: &e{CLAIMS_ACTUAL} &6/ &e{CLAIMS_MAX}'
+            - '&6Leader: &e{LEADER}'
+            - '&6Create Date: &e{DATE}'
+            - '&6Guild Creator: &e{CREATOR}'
+        Emblem: '&2&l» &aEmblem'
+    PlayerInfo:
+      Name: '&3{PLAYER} Information'
+      Items:
+        Back: '&cBack'
+        General:
+          Name: '&4&l» &cGeneral Information'
+          Lore:
+            - '&6Name: &e{NAME}'
+            - '&6UUID: &e{UUID}'
+            - '&6Guild: &e{GUILD}'
+        Race:
+          Name: '&5&l» &dRace Information'
+          Lore:
+            - '&6Race: &e{RACE}'
+            - '&6Change Count Left: &e{COUNT}'
+            - '&6Emblem:'
     Guild:
       Name: '&9Guild Management'
       Items:
