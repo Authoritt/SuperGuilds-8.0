@@ -35,7 +35,7 @@ public class RaceUtils {
 
 		if (race.equalsIgnoreCase(playerConfig.getString("Data.Race"))) {
 			new MSGPlayer().send(player, new LangManager().getLang("Race.SameRace"));
-			new RaceGUI().openRaceGUI(player);
+			new RaceGUI().openRaceGUI(player, false);
 			return;
 		}
 

@@ -2,6 +2,7 @@ package info.itsthesky.SuperGuilds.features.races;
 
 
 import info.itsthesky.SuperGuilds.SuperGuilds;
+import info.itsthesky.SuperGuilds.features.guild.GuildGUI;
 import info.itsthesky.SuperGuilds.tools.ItemBuilder;
 import info.itsthesky.SuperGuilds.tools.LangManager;
 import info.itsthesky.SuperGuilds.tools.Utils;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class RaceGUI {
 
-	public void openRaceGUI(Player player) {
+	public void openRaceGUI(Player player, Boolean fromGuild) {
 
 		final InventoryAPI inventory = InventoryAPI.create(SuperGuilds.class);
 
@@ -56,14 +57,24 @@ public class RaceGUI {
 		countItemBuilder.setName(racesConfig.getString("Settings.Items.RaceRight.Name").replace("&", "§").replace("{RIGHTS}", currentRight.toString()));
 		ItemStack countItem = countItemBuilder.toItemStack();
 
+		ItemBuilder backBuilder = new ItemBuilder(Material.getMaterial(racesConfig.getString("Settings.Items.Back.Item")));
+		backBuilder.setName(racesConfig.getString("Settings.Items.Back.Name").replace("&", "§"));
+		ItemStack backItem = backBuilder.toItemStack();
+
 
 		inventory.setSize(9 * customSize);
 		inventory.setTitle(new LangManager().getLang("GUI.Prefix") + new LangManager().getLang("GUI.Race"));
 		inventory.setBorder(new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setName("§1").toItemStack());
 
-		inventory.addItem(racesConfig.getInt("Settings.Items.Close.Slot"), closeItem, true, inventoryClickEvent -> {
-			player.closeInventory();
-		});
+		if (fromGuild) {
+			inventory.addItem(racesConfig.getInt("Settings.Items.Back.Slot"), backItem, true, inventoryClickEvent -> {
+				new GuildGUI().openGuildGUI(player);
+			});
+		} else {
+			inventory.addItem(racesConfig.getInt("Settings.Items.Close.Slot"), closeItem, true, inventoryClickEvent -> {
+				player.closeInventory();
+			});
+		}
 		inventory.addItem(racesConfig.getInt("Settings.Items.Information.Slot"), infoItem, true);
 		inventory.addItem(racesConfig.getInt("Settings.Items.RaceRight.Slot"), countItem, true);
 

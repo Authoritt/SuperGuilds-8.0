@@ -12,7 +12,11 @@ Key:
   Prefix: '&8[&6&lSG&8] '
   NoConsole: '&cYou cannot do that from the console!'
   NoPerm: '&cYou don''t have the permission to do that!'
-  NoGuild: '&cYou don''t have any guild!'
+  NoGuild: '&cYou don''t have any guild! Create one with &4/guild create <name> &c!'
+  NoGuildName: '&cYou need to specify the guild''s name!'
+  CharacterNotAllowed: '&cYou cannot use these character in the text: &4({CHARS}) &c!'
+  TooLongTooShort: '&cThis guild name is too long or too short! It must be between &4{MIN} and {MAX} &c!'
+  GuildAlreadyExist: '&cOne guild already have this name set!'
   GuildCreation:
     TooMaxMin: '&cThis name is too long or too small!'
     AlreadyExist: '&cThis guilld''s name already exist!'
@@ -39,8 +43,30 @@ Key:
   GUI:
     Prefix: '&8&l» '
     Race: '&5Race Selection'
-    Guild: '&9Guild Managment'
+    GuildInfo:
+      Name: '&3Guild Information'
+      Items:
+        Back: '&cBack'
+
+    Guild:
+      Name: '&9Guild Management'
+      Items:
+        Info: '&3&l» &bGuild Information'
+        Close: '&4&l» &cClose Guild Menu'
+        Emblem: '&2&l» &aEdit Guild Emblem'
+        PlayerInfo: '&6&l» &e{PLAYER} Information'
+        Races: '&5&l» &dRaces Menu'
+        Members: '&8&l> &7Members List (&5{ACTUAL}&7/&5{MAX}&7)'
+        Claims: '&8&l> &7Claims List (&5{ACTUAL}&7/&5{MAX}&7)'
+        JoinStatus:
+          Enable:
+            Name: '&aJoin Status: &2Open'
+            Lore: '&7&oEveryone can join your guild at any time'
+          Disable:
+            Name: '&8&l> &cJoin Status: &4Closed'
+            Lore: '&8&l> &7&oPlayer need an invitation to join your guild'
   Race:
+    NoRace: '&cYou don''t have any race! You need one to access your guild!'
     NoRightsRemaining: '&cYou don''t have any more remaining race rights!'
     RaceChanged: '&aYou''ve been changed your race, you are now a &2{RACE}&a !'
     SameRace: '&cYou cannot get the same race you already have!'
@@ -55,3 +81,5 @@ Key:
       SaveText: '&aClick here to save your draft emblem'
       ResetText: '&4Click here to reset your draft emblem'
       BackText: '&cClick here to return to main guild menu'
+  Guild:
+    AlreadyHaveGuild: '&cYou already have a guild! Execute &4/guild &cto open the main menu!'

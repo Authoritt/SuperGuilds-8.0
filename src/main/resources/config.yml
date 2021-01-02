@@ -12,8 +12,21 @@ General:
   # Send debug message, like when a player join without any file created
   # Recommended to enable it for alpha and beta state of SuperGuilds
   Debug: true
+  # PlaceHolderAPI support. For list of these, see docs
+  PlaceHoldersAPI: false
+  # If above is enabled, did Emblem placeholder will work?
+  EmblemPlaceHolder: false
 
 # Race Configuration
 Races:
   # The default quantity of right a new player receive.
   DefaultRights: 5
+
+# Guild Configuration
+Guild:
+  # Size of character needed for the name
+  NameSize:
+    Min: 3
+    Max: 10
+  # Allowed character for the name
+  Allowed-Symbol: $-=-^-q-w-e-r-t-y-u-i-o-p-g-a-s-d-f-g-h-j-k-l-z-x-c-v-b-n-m-1-2-3-4-5-6-7-8-9-0-Q-W-E-R-T-Y-U-I-O-P-G-A-S-D-F-G-H-J-K-L-Z-X-C-V-B-N-M-а-б-в-г-д-е-ё-ж-з-и-й-к-л-м-н-о-п-р-с-т-у-ф-х-ц-ч-ш-щ-ь-ы-ъ-э-ю-я-А-Б-В-Г-Д-Е-Ё-Ж-З-И-Й-К-Л-М-Н-О-П-Р-С-Т-У-Ф-Х-Ц-Ч-Ш-Щ-Ь-Ы-Ъ-Э-Ю-Я

@@ -1,10 +1,13 @@
 package info.itsthesky.SuperGuilds.tools;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.List;
+import java.util.UUID;
 
 public class ItemBuilder {
 	private final ItemStack item;
@@ -34,6 +37,14 @@ public class ItemBuilder {
 
 	public ItemBuilder setMaterial(Material material) {
 		item.setType(material);
+		return this;
+	}
+
+	public ItemBuilder setOwner(UUID uuid) {
+		SkullMeta sm = (SkullMeta) item.getItemMeta();
+		assert sm != null;
+		sm.setOwningPlayer(Bukkit.getOfflinePlayer(uuid));
+		item.setItemMeta(sm);
 		return this;
 	}
 

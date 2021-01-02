@@ -14,9 +14,16 @@ Settings:
   Menu-Rows: 3
   # Specifics Menu Items
   Items:
+    # Close & Back item are same;
+    # If player open the race gui from guild menu,
+    # back item will be shown, Else it's the close item
     Close:
       Item: RED_DYE
       Name: '&cClose'
+      Slot: 0
+    Back:
+      Item: ARROW
+      Name: '&cBack'
       Slot: 0
     Information:
       Item: PAPER
