@@ -8,6 +8,12 @@
 # Thanks for using SuperGuilds ;)
 
 # General Configuration
+General:
+  # Send debug message, like when a player join without any file created
+  # Recommended to enable it for alpha and beta state of SuperGuilds
+  Debug: true
+
+# Race Configuration
 Races:
   # The default quantity of right a new player receive.
   DefaultRights: 5

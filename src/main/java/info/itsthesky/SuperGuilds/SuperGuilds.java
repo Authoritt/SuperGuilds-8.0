@@ -1,12 +1,12 @@
 package info.itsthesky.SuperGuilds;
 
+import info.itsthesky.SuperGuilds.managers.Registration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
 
 public class SuperGuilds extends JavaPlugin {
 	private static SuperGuilds instance;
-
 
 	@Override
 	public void onEnable() {
@@ -19,6 +19,8 @@ public class SuperGuilds extends JavaPlugin {
 		saveResourceAs("races.yml", "races.yml");
 		saveResourceAs("locale.yml", "locale.yml");
 
+		Registration.register();
+
 		getLogger().info("SuperGuilds v" + getDescription().getVersion() + " has been loaded!");
 		getLogger().info("==========================================");
 	}
@@ -27,7 +29,7 @@ public class SuperGuilds extends JavaPlugin {
 		return instance;
 	}
 
-	private void saveResourceAs(String inPath, String outPath) {
+	public void saveResourceAs(String inPath, String outPath) {
 		if (inPath == null || inPath.isEmpty()) {
 			throw new IllegalArgumentException("The input path cannot be null or empty");
 		}

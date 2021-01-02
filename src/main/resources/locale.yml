@@ -6,6 +6,8 @@
 #   - If no node (= key) are null
 
 # Thanks for using SuperGuilds ;)
+
+# LOCALE FILE: en_US
 Key:
   Prefix: '&8[&6&lSG&8] '
   NoConsole: '&cYou cannot do that from the console!'
@@ -18,6 +20,9 @@ Key:
     Header: '&8-----[ &6&lSuperGuilds &8]-----'
     Line1: '&e/g &7- &bOpen the main Guild Menu'
     Line2: '&e/g help &7- &bSend this message'
+    Line3: '&e/g race &7- &bOpen the race menu'
+    Line4: '&e/g emblem &7- &bOpen the emblem editor'
+    Line5: '&e/g reload &7- &bShow reload arguments'
     Footer: '&8-----[ &6&lSuperGuilds &8]-----'
   ReloadMessage:
     Header: '&8-----[ &6&lSuperGuilds &8]-----'
@@ -25,6 +30,7 @@ Key:
     Line1: '  &eall &7- &bReload everythings into SuperGuilds'
     Line2: '  &econfig &7- &bReload the config file (config.yml)'
     Line3: '  &elocale &7- &bReload locale (language file) choosed'
+    Line4: '  &eraces &7- &bReload the races file (races.yml)'
     Footer: '&8-----[ &6&lSuperGuilds &8]-----'
     ReloadAllWaiting: '&eReloading every SuperGuilds files ...'
     ReloadConfigWaiting: '&eReloading configuration file ...'
@@ -36,7 +42,8 @@ Key:
     Guild: '&9Guild Managment'
   Race:
     NoRightsRemaining: '&cYou don''t have any more remaining race rights!'
-    RaceChanged: 'You''ve been changed your race, you are now a {RACE} !'
+    RaceChanged: '&aYou''ve been changed your race, you are now a &2{RACE}&a !'
+    SameRace: '&cYou cannot get the same race you already have!'
   Emblem:
     BookName: '&3&lEmblem Editor'
     ChangeColor: 'Click for change the selected color!'
