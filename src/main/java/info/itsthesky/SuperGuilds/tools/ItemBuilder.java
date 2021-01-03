@@ -1,5 +1,7 @@
 package info.itsthesky.SuperGuilds.tools;
 
+import de.tr7zw.nbtapi.NBTContainer;
+import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -10,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class ItemBuilder {
-	private final ItemStack item;
+	private ItemStack item;
 
 	public ItemBuilder(Material material) {
 		item = new ItemStack(material, 1);
@@ -52,6 +54,15 @@ public class ItemBuilder {
 		ItemMeta meta = item.getItemMeta();
 		meta.setUnbreakable(!meta.isUnbreakable());
 		item.setItemMeta(meta);
+		return this;
+	}
+
+	public ItemBuilder setBase64(String base64) {
+		if (item.getType() == Material.PLAYER_HEAD) {
+			NBTItem nbti = new NBTItem(item);
+			nbti.mergeCompound(new NBTContainer("{display:{Name:\"{\\\"text\\\":\\\"Portfolios\\\"}\"},SkullOwner:{Id:[I;-471448956,411780600,-2117854973,552810048],Properties:{textures:[{Value:\"" + base64 + "\"}]}}}"));
+			item = nbti.getItem();
+		}
 		return this;
 	}
 
